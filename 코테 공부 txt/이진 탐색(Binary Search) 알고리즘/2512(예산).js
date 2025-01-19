@@ -7,7 +7,7 @@ let arr = input[1].split(" ").map(Number);
 let M = Number(input[2]);
 
 let start = 1;
-let end = arr.reduce((a, b) => Math.max(a, b));
+let end = Math.max(...arr);
 let result = 0;
 
 while (start <= end) {
@@ -20,7 +20,7 @@ while (start <= end) {
     result = mid;
     start = mid + 1;
   } else {
-    end = mid - 1;
+    end = mid - 1;hk
   }
 }
 
