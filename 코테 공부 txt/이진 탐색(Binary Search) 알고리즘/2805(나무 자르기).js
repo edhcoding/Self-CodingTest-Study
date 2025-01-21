@@ -1,9 +1,11 @@
-let input = require("fs").readFileSync(0, "utf-8").trim().split("\n");
+// let input = require("fs").readFileSync(0, "utf-8").trim().split("\n");
+
+let input = ["4 7", "20 15 10 17"]; // 15
 
 let [N, M] = input[0].split(" ").map(Number); // N: 나무의 수, M: 필요한 나무의 길이
 let trees = input[1].split(" ").map(Number); // 각 나무의 높이
 
-let start = 0;
+let start = 1;
 let end = Math.max(...trees);
 let result = 0;
 
@@ -27,4 +29,5 @@ while (start <= end) {
   }
 }
 
+// start > end 일 때 종료
 console.log(result);

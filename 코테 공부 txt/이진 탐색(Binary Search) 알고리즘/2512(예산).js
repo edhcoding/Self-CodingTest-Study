@@ -8,7 +8,7 @@ let M = Number(input[2]);
 
 let start = 1;
 let end = Math.max(...arr);
-let result = 0;
+let result = 0; // 최대 예산
 
 while (start <= end) {
   let mid = parseInt((start + end) / 2);
@@ -20,7 +20,7 @@ while (start <= end) {
     result = mid;
     start = mid + 1;
   } else {
-    end = mid - 1;hk
+    end = mid - 1;
   }
 }
 
