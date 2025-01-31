@@ -1,4 +1,4 @@
-// let input = require("fs").readFileSync(0, "utf-8").trim();
+// let input = require("fs").readFileSync(0, "utf-8").trim().split(" ");
 
 let input = ["4", "2"];
 
