@@ -10,24 +10,24 @@ let maxCount = 0;
 const dx = [-1, 1, 0, 0]; // 행(x) 이동(상 하)
 const dy = [0, 0, -1, 1]; // 열(y) 이동(좌 우)
 
-function dfs(x, y, count) {
-  maxCount = Math.max(maxCount, count);
+function dfs(x, y) {
+  maxCount = Math.max(maxCount, visited.size);
 
   // 4방향 탐색
   for (let i = 0; i < 4; i++) {
-    const nx = x + dx[i]; // -1 1
-    const ny = y + dy[i]; // 0 0
+    const nx = x + dx[i];
+    const ny = y + dy[i];
 
     // 범위 체크 및 방문하지 않은 알파벳 체크
     if (nx >= 0 && nx < R && ny >= 0 && ny < C && !visited.has(board[nx][ny])) {
       visited.add(board[nx][ny]);
-      dfs(nx, ny, count + 1);
+      dfs(nx, ny);
       visited.delete(board[nx][ny]);
     }
   }
 }
 
 visited.add(board[0][0]);
-dfs(0, 0, 1);
+dfs(0, 0);
 
 console.log(maxCount);
