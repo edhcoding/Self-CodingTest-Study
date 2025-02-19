@@ -32,7 +32,9 @@ function dfs(x, y) {
       nx >= 0 && // 위
       nx < N && // 아래
       ny >= 0 && // 왼쪽
-      ny < N // 오른쪽
+      ny < N && // 오른쪽
+      map[nx][ny] === 1 && // 집이 있는 곳
+      !visited[nx][ny] // 방문하지 않은 곳
     )
       size += dfs(nx, ny);
   }
