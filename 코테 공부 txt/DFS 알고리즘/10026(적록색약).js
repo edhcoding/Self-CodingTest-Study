@@ -14,7 +14,7 @@ const dy = [0, 0, -1, 1]; // 좌 우
 function dfs(x, y, color, visited) {
   visited[x][y] = true;
 
-  for (let i = 0; i < N - 1; i++) {
+  for (let i = 0; i < 4; i++) {
     const nx = x + dx[i];
     const ny = y + dy[i];
 
@@ -34,7 +34,7 @@ function dfs(x, y, color, visited) {
 function dfsColorBlind(x, y, color, visited) {
   visited[x][y] = true;
 
-  for (let i = 0; i < N - 1; i++) {
+  for (let i = 0; i < 4; i++) {
     const nx = x + dx[i];
     const ny = y + dy[i];
 
